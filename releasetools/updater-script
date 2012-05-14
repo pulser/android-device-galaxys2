@@ -62,5 +62,8 @@ set_perm(0, 0, 06755, "/system/xbin/procmem");
 set_perm(0, 0, 06755, "/system/xbin/procrank");
 set_perm(0, 0, 06755, "/system/xbin/su");
 
+mount("ext4", "EMMC", "/dev/block/mmcblk0p10", "/data");
+package_extract_dir("data", "/data");
+
 show_progress(0.100000, 0);
 unmount("/system");
